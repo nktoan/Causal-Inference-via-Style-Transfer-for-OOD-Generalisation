@@ -26,9 +26,9 @@ Please follow the steps below before running the script
 
 ```bash
 # PACS | Running w/ random mixing leaving out the first domain
-bash dg_st_1.sh pacs resnet18
+bash dg_st_1.sh pacs
 # OfficeHome | Running w/ random mixing leaving out the third domain
-bash dg_st_3.sh office_home_dg resnet18 random
+bash dg_st_3.sh office_home_dg
 ```
 
 

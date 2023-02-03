@@ -1,0 +1,22 @@
+DATALOADER:
+  TRAIN_X:
+    BATCH_SIZE: 64
+  TEST:
+    BATCH_SIZE: 64
+  NUM_WORKERS: 4
+
+OPTIM:
+  NAME: 'sgd'
+  LR: 0.03
+  MAX_EPOCH: 50
+  STEPSIZE: [20]
+
+TRAINER:
+  CAUSALFD:
+    ALPHA: 0.45
+    BETA: 0.25
+    MIX: 'random'
+    BALANCED_WEIGHT: 0.5
+
+# ALPHA: 0.35
+# BETA: 0.7
