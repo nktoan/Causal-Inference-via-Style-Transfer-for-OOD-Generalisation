@@ -1,6 +1,6 @@
-# Front-door Adjustment via Style Transfer for Out-of-distribution Generalisation
+# Causal Inference via Style Transfer for Out-of-distribution Generalisation
 
-This repo contains the code of the in-submission paper to CVPR 23, 'Front-door Adjustment via Style Transfer for Out-of-distribution Generalisation'
+This repo contains the code of the in-submission paper to KDD 23, 'Causal Inference via Style Transfer for Out-of-distribution Generalisation'
 
 Authors: Anonymous
 
