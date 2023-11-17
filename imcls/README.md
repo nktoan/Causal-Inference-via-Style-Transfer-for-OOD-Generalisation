@@ -53,7 +53,7 @@ If you have any questions, feel free to reach out by raising an issue on this Gi
 
 ## Citation
 
-If you employ the codes or datasets provided in this repository or utilize our proposed method as comparison baselines in your experiments, please cite our paper. Again, thank you for your interest!
+If you employ the codes or datasets provided in this repository or utilise our proposed method as comparison baselines in your experiments, please cite our paper. Again, thank you for your interest!
 
 ```
 @inproceedings{nguyen2023causal,
