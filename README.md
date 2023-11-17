@@ -30,7 +30,7 @@ After completing these steps, you can proceed with running the script below. If 
 #### Step 1: Training the neural style transfer (NST) model
 
 - To obtain the pre-trained AdaIN and VGG-19 models, visit the GitHub page: [AdaIN](https://github.com/MAlberts99/PyTorch-AdaIN-StyleTransfer).
-(Alternatively, we have backed up the pre-trained AdaIN NST models and the VGG-19-normalised files [here](). Utilise these resources for fine-tuning on our Out-of-Distribution (OOD) generalisation datasets.)
+(Alternatively, we have backed up the pre-trained AdaIN NST models and the VGG-19-normalised files [here](https://drive.google.com/drive/folders/1Fd0j4_7CxC_vhUFCkQUviE_2drsL84R4?usp=sharing). Utilise these resources for fine-tuning on our Out-of-Distribution (OOD) generalisation datasets.)
 
 - After completing the download, please move the obtained weights to the designated folder: `imcls/nst/vgg_checkpoints/pretrained`
 - To initiate the training/fine-tuning process for the Neural Style Transfer (NST) model, employ the following bash command:
