@@ -48,4 +48,17 @@ bash dg_fd_3.sh office_home_dg resnet18 random
 bash dg_fd_4.sh office_home_dg resnet18 crossdomain
 ```
 
+## Citation
+
+If you use the codes or datasets in this repository, please cite our paper.
+```
+@inproceedings{nguyen2023causal,
+  title={Causal Inference via Style Transfer for Out-of-distribution Generalisation},
+  author={Nguyen, Toan and Do, Kien and Nguyen, Duc Thanh and Duong, Bao and Nguyen, Thin},
+  booktitle={Proceedings of the 29th ACM SIGKDD Conference on Knowledge Discovery and Data Mining},
+  pages={1746--1757},
+  year={2023}
+}
+```
+
 
