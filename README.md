@@ -4,24 +4,26 @@ This repository contains the codebase for our accepted paper in the Research Tra
 
 Thank you for your interest in our work!
 
-## Structure of the Repository
+## Repository Structure
 
-The repository is structured into two distinct sub-repositories:
+The repository is organized into two distinct sub-repositories:
 
-1. **Dassl.Pytorch**: the [Dassl.pytorch] toolbox in which we built our project on. We thank the authors of [Dassl.pytorch] for their great codebase. 
-2. **imcls**: Our main repository contains our proposed Causal Inference via Style Transfer methodology for the problem of OOD Generalisation.
+1. **Dassl.Pytorch**: This sub-repository contains the [Dassl.pytorch] toolbox, upon which our project is built. We express our gratitude to the authors of [Dassl.pytorch] for providing an excellent codebase.
+2. **imcls**: The main repository hosts our proposed methodology for Causal Inference via Style Transfer, specifically designed for addressing the Out-of-Distribution (OOD) Generalization problem.
+Installation Instructions
 
-## How to install
+This code relies on the [Dassl.pytorch](https://github.com/KaiyangZhou/Dassl.pytorch) toolbox. Please follow the instructions outlined in Dassl.pytorch's installation guide to install the `dassl` package.
 
-This code is based on the toolbox [Dassl.pytorch](https://github.com/KaiyangZhou/Dassl.pytorch). Please follow the instructions at https://github.com/KaiyangZhou/Dassl.pytorch#installation to install `dassl`.
+Feel free to reach out if you encounter any issues during the installation process.
 
-## How to run
+## Running Instructions
+Before executing the script, please ensure the following steps are completed:
 
-Please follow the steps below before running the script
+- Modify the paths for `DATA` and `DASSL` in the `*.sh` files according to the directory structure in your environment.
+- Activate the `dassl` environment using the command `conda activate dassl`.
+- Navigate to the `scripts/`.
 
-- modify `DATA` and `DASSL` in `*.sh` based on the paths on your environment
-- activate the `dassl` environment via `conda activate dassl`
-- `cd` to `scripts/`
+After completing these steps, you can proceed with running the script below. If you encounter any issues or have questions, feel free to ask for assistance.
 
 ### Domain Generalization
 
