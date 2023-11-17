@@ -9,9 +9,9 @@ Before executing the script, please ensure the following steps are completed:
 
 After completing these steps, you can proceed with running the script below. If you encounter any issues or have questions, feel free to ask for assistance.
 
-### Domain Generalisation
+## Out-of-distribution Generalisation
 
-#### Step 1: Training the neural style transfer (NST) model
+### Step 1: Training the neural style transfer (NST) model
 
 - To obtain the pre-trained AdaIN and VGG-19 models, visit the GitHub page: [AdaIN](https://github.com/MAlberts99/PyTorch-AdaIN-StyleTransfer).
 (Alternatively, we have backed up the pre-trained AdaIN NST models and the VGG-19-normalised files [here](https://drive.google.com/drive/folders/1Fd0j4_7CxC_vhUFCkQUviE_2drsL84R4?usp=sharing). Utilise these resources for fine-tuning on our Out-of-Distribution (OOD) generalisation datasets.)
@@ -29,7 +29,7 @@ bash dg_st_3.sh office_home_dg resnet18 random
 - It's important to note that the Fourier-based Style Transfer (FST) model does not require training.
 - Additionally, for Digits-DG, we resize all images to the dimensions of 224x224 before downscaling them to (32×32) for further processing by the classifier.
   
-#### Step 2: Training the classifier
+### Step 2: Training the classifier
 
 Please use the following command line for training the generalisable classifier:
 
