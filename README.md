@@ -6,7 +6,7 @@ Thank you for your interest in our work!
 
 ## Repository Structure
 
-The repository is organized into two distinct sub-repositories:
+The repository is organised into two distinct sub-repositories:
 
 1. **Dassl.Pytorch**: This sub-repository contains the [Dassl.pytorch] toolbox, upon which our project is built. We express our gratitude to the authors of [Dassl.pytorch] for providing an excellent codebase.
 2. **imcls**: The main repository hosts our proposed methodology for Causal Inference via Style Transfer, specifically designed for addressing the Out-of-Distribution (OOD) Generalisation problem.
@@ -29,9 +29,11 @@ After completing these steps, you can proceed with running the script below. If 
 
 #### Step 1: Training the neural style transfer (NST) model
 
-- Please go to the following GitHub page to download pre-trained AdaIN and VGG-19 models: [AdaIN](https://github.com/MAlberts99/PyTorch-AdaIN-StyleTransfer). 
-- After downloading, please place the weights into the folder: `imcls/nst/vgg_checkpoints/pretrained`
-- To train the Neural Style Transfer (NST) model, use the following bash command:
+- To obtain the pre-trained AdaIN and VGG-19 models, visit the GitHub page: [AdaIN](https://github.com/MAlberts99/PyTorch-AdaIN-StyleTransfer).
+(Alternatively, we have backed up the pre-trained AdaIN NST models and the VGG-19-normalised files [here](). Utilise these resources for fine-tuning on our Out-of-Distribution (OOD) generalisation datasets.)
+
+- After completing the download, please move the obtained weights to the designated folder: `imcls/nst/vgg_checkpoints/pretrained`
+- To initiate the training/fine-tuning process for the Neural Style Transfer (NST) model, employ the following bash command:
 
 ```bash
 # PACS | Running w/ random mixing leaving out the first domain
@@ -39,10 +41,13 @@ bash dg_st_1.sh pacs resnet18
 # OfficeHome | Running w/ random mixing leaving out the third domain
 bash dg_st_3.sh office_home_dg resnet18 random
 ```
-- If you do not want to pre-train the NST model, you can download and use our pre-trained for all the experimental datasets via this link: [PretrainedNST]().
-- Note that the Fourier-based Style Transfer (FST) model need not be trained. 
-
+- If you do not wish to pre-train the NST model, you can download and use our pre-trained model for all the experimental datasets via this link: [PretrainedNST]().
+- It's important to note that the Fourier-based Style Transfer (FST) model does not require training.
+- Additionally, for Digits-DG, we resise all images to the dimensions of 224x224 before downscaling them to (32×32) for further processing by the classifier.
+  
 #### Step 2: Training the classifier
+
+Please use the following command line for training the generalisable classifier:
 
 ```bash
 # PACS | Running w/ random mixing leaving out the first domain
@@ -57,6 +62,10 @@ bash dg_fd_3.sh office_home_dg resnet18 random
 # OfficeHome | Running w/ crossdomain mixing leaving out the fourth domain
 bash dg_fd_4.sh office_home_dg resnet18 crossdomain
 ```
+
+Please be aware that *'random mixing'* involves randomly sampling stylised images from all domains, where the number of images in each domain may vary. On the other hand, *'cross-domain'* ensures the random selection of the same number of images from all domains.
+
+If you have any questions, feel free to reach out by raising an issue on this GitHub repository or contacting me via the email provided in the paper.
 
 ## Citation
 
