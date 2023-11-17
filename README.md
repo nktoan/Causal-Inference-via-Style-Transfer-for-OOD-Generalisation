@@ -9,7 +9,7 @@ Thank you for your interest in our work!
 The repository is organized into two distinct sub-repositories:
 
 1. **Dassl.Pytorch**: This sub-repository contains the [Dassl.pytorch] toolbox, upon which our project is built. We express our gratitude to the authors of [Dassl.pytorch] for providing an excellent codebase.
-2. **imcls**: The main repository hosts our proposed methodology for Causal Inference via Style Transfer, specifically designed for addressing the Out-of-Distribution (OOD) Generalization problem.
+2. **imcls**: The main repository hosts our proposed methodology for Causal Inference via Style Transfer, specifically designed for addressing the Out-of-Distribution (OOD) Generalisation problem.
 Installation Instructions
 
 This code relies on the [Dassl.pytorch](https://github.com/KaiyangZhou/Dassl.pytorch) toolbox. Please follow the instructions outlined in Dassl.pytorch's installation guide to install the `dassl` package.
@@ -25,7 +25,7 @@ Before executing the script, please ensure the following steps are completed:
 
 After completing these steps, you can proceed with running the script below. If you encounter any issues or have questions, feel free to ask for assistance.
 
-### Domain Generalization
+### Domain Generalisation
 
 #### Step 1: Training the neural style transfer (NST) model
 
