@@ -1,6 +1,6 @@
 # Causal Inference via Style Transfer for OOD Generalisation
 
-This repository contains the codebase for our accepted paper in the Research Track of KDD'23, entitled *Causal Inference via Style Transfer for Out-of-distribution Generalisation*.
+This repository contains the codebase for our accepted paper in the Research Track of **KDD'23**, entitled **Causal Inference via Style Transfer for Out-of-distribution Generalisation**.
 
 Thank you for your interest in our work!
 
@@ -9,7 +9,7 @@ Thank you for your interest in our work!
 The repository is organised into two distinct sub-repositories:
 
 1. **Dassl.Pytorch**: This sub-repository contains the [Dassl.pytorch] toolbox, upon which our project is built. We express our gratitude to the authors of [Dassl.pytorch] for providing an excellent codebase.
-2. **imcls**: The main repository hosts our proposed methodology for Causal Inference via Style Transfer, specifically designed for addressing the Out-of-Distribution (OOD) Generalisation problem.
+2. **imcls**: The main repository hosts our proposed methodology for Causal Inference via Style Transfer, specifically designed to address the Out-of-Distribution (OOD) Generalisation problem.
 Installation Instructions
 
 This code relies on the [Dassl.pytorch](https://github.com/KaiyangZhou/Dassl.pytorch) toolbox. Please follow the instructions outlined in Dassl.pytorch's installation guide to install the `dassl` package.
@@ -43,7 +43,7 @@ bash dg_st_3.sh office_home_dg resnet18 random
 ```
 - If you do not wish to pre-train the NST model, you can download and use our pre-trained model for all the experimental datasets via this link: [PretrainedNST](https://drive.google.com/drive/folders/124eDQlk04VC0jsQNCzMe016px5f9hcbM?usp=sharing).
 - It's important to note that the Fourier-based Style Transfer (FST) model does not require training.
-- Additionally, for Digits-DG, we resise all images to the dimensions of 224x224 before downscaling them to (32×32) for further processing by the classifier.
+- Additionally, for Digits-DG, we resize all images to the dimensions of 224x224 before downscaling them to (32×32) for further processing by the classifier.
   
 #### Step 2: Training the classifier
 
