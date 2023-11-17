@@ -1,38 +1,37 @@
-# Causal Inference via Style Transfer for Out-of-distribution Generalisation
+This main repository hosts our proposed methodology for Causal Inference via Style Transfer, specifically designed to address the Out-of-Distribution (OOD) Generalisation problem.
 
-This repo contains the code of the in-submission paper to KDD 23, 'Causal Inference via Style Transfer for Out-of-distribution Generalisation'
+## Running Instructions
+Before executing the script, please ensure the following steps are completed:
 
-Authors: Anonymous
+- Modify the paths for `DATA` and `DASSL` in the `*.sh` files according to the directory structure in your environment.
+- Activate the `dassl` environment using the command `conda activate dassl`.
+- Navigate to the `scripts/`.
 
-## How to install
+After completing these steps, you can proceed with running the script below. If you encounter any issues or have questions, feel free to ask for assistance.
 
-This code is based on [Dassl.pytorch](https://github.com/KaiyangZhou/Dassl.pytorch). Please follow the instructions at https://github.com/KaiyangZhou/Dassl.pytorch#installation to install `dassl`.
-
-## How to run
-
-Please follow the steps below before running the script
-
-- modify `DATA` and `DASSL` in `*.sh` based on the paths on your computer
-- activate the `dassl` environment via `conda activate dassl`
-- `cd` to `scripts/`
-
-### Domain Generalization
+### Domain Generalisation
 
 #### Step 1: Training the neural style transfer (NST) model
 
-- Please go the github page to download pretrained AdaIN and VGG-19 models: [AdaIN](https://github.com/MAlberts99/PyTorch-AdaIN-StyleTransfer). 
-- After downloading, please place the weights into the folder: `imcls/nst/vgg_checkpoints/pretrained`
-- To train the NST model, using the following bash command:
+- To obtain the pre-trained AdaIN and VGG-19 models, visit the GitHub page: [AdaIN](https://github.com/MAlberts99/PyTorch-AdaIN-StyleTransfer).
+(Alternatively, we have backed up the pre-trained AdaIN NST models and the VGG-19-normalised files [here](https://drive.google.com/drive/folders/1Fd0j4_7CxC_vhUFCkQUviE_2drsL84R4?usp=sharing). Utilise these resources for fine-tuning on our Out-of-Distribution (OOD) generalisation datasets.)
+
+- After completing the download, please move the obtained weights to the designated folder: `imcls/nst/vgg_checkpoints/pretrained`
+- To initiate the training/fine-tuning process for the Neural Style Transfer (NST) model, employ the following bash command:
 
 ```bash
 # PACS | Running w/ random mixing leaving out the first domain
-bash dg_st_1.sh pacs
+bash dg_st_1.sh pacs resnet18
 # OfficeHome | Running w/ random mixing leaving out the third domain
-bash dg_st_3.sh office_home_dg
+bash dg_st_3.sh office_home_dg resnet18 random
 ```
-
-
+- If you do not wish to pre-train the NST model, you can download and use our pre-trained model for all the experimental datasets via this link: [PretrainedNST](https://drive.google.com/drive/folders/124eDQlk04VC0jsQNCzMe016px5f9hcbM?usp=sharing).
+- It's important to note that the Fourier-based Style Transfer (FST) model does not require training.
+- Additionally, for Digits-DG, we resize all images to the dimensions of 224x224 before downscaling them to (32×32) for further processing by the classifier.
+  
 #### Step 2: Training the classifier
+
+Please use the following command line for training the generalisable classifier:
 
 ```bash
 # PACS | Running w/ random mixing leaving out the first domain
@@ -48,4 +47,19 @@ bash dg_fd_3.sh office_home_dg resnet18 random
 bash dg_fd_4.sh office_home_dg resnet18 crossdomain
 ```
 
+Please be aware that *'random mixing'* involves randomly sampling stylised images from all domains, where the number of images in each domain may vary. On the other hand, *'cross-domain'* ensures the random selection of the same number of images from all domains.
 
+If you have any questions, feel free to reach out by raising an issue on this GitHub repository or contacting me via the email provided in the paper.
+
+## Citation
+
+If you use the codes or datasets in this repository, please cite our paper.
+```
+@inproceedings{nguyen2023causal,
+  title={Causal Inference via Style Transfer for Out-of-distribution Generalisation},
+  author={Nguyen, Toan and Do, Kien and Nguyen, Duc Thanh and Duong, Bao and Nguyen, Thin},
+  booktitle={Proceedings of the 29th ACM SIGKDD Conference on Knowledge Discovery and Data Mining},
+  pages={1746--1757},
+  year={2023}
+}
+```
