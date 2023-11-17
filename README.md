@@ -41,7 +41,7 @@ bash dg_st_1.sh pacs resnet18
 # OfficeHome | Running w/ random mixing leaving out the third domain
 bash dg_st_3.sh office_home_dg resnet18 random
 ```
-- If you do not wish to pre-train the NST model, you can download and use our pre-trained model for all the experimental datasets via this link: [PretrainedNST]().
+- If you do not wish to pre-train the NST model, you can download and use our pre-trained model for all the experimental datasets via this link: [PretrainedNST](https://drive.google.com/drive/folders/124eDQlk04VC0jsQNCzMe016px5f9hcbM?usp=sharing).
 - It's important to note that the Fourier-based Style Transfer (FST) model does not require training.
 - Additionally, for Digits-DG, we resise all images to the dimensions of 224x224 before downscaling them to (32×32) for further processing by the classifier.
   
