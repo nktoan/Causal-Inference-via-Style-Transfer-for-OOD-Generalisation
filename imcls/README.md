@@ -53,7 +53,8 @@ If you have any questions, feel free to reach out by raising an issue on this Gi
 
 ## Citation
 
-If you use the codes or datasets in this repository, please cite our paper.
+If you employ the codes or datasets provided in this repository or utilize our proposed method as comparison baselines in your experiments, please cite our paper. Again, thank you for your interest!
+
 ```
 @inproceedings{nguyen2023causal,
   title={Causal Inference via Style Transfer for Out-of-distribution Generalisation},
