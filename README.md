@@ -1,6 +1,6 @@
 # Causal Inference via Style Transfer for Out-of-distribution Generalisation
 
-This repo contains the code of our accepted paper at Research Track KDD'23, entitled 'Causal Inference via Style Transfer for Out-of-distribution Generalisation'
+This repository contains the codebase for our accepted paper in the Research Track of KDD'23, entitled 'Causal-Inference-via-Style-Transfer-for-OOD-Generalisation'.
 
 **We will clean the code and upload pretrained weights soon. Thank you for your interest in our work!**
 
